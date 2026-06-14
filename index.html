@@ -63,12 +63,21 @@
     border: 2px outset #808080;
     font-size: 22px;
   }
-  ul.specialties {
+  /* Group heading + list so the title sits directly atop the bullets */
+  .specialties-block {
     display: inline-block;
+    text-align: left;
+    margin: 6px auto;
+  }
+  .specialties-block h2 {
+    margin: 0 0 8px 0;
+  }
+  ul.specialties {
     text-align: left;
     font-size: 18px;
     line-height: 1.7;
     list-style: none;
+    margin: 0;
     padding: 0;
   }
   ul.specialties li::before {
@@ -141,6 +150,7 @@
   <div class="page">
     <h1>Jack of Some Tricks</h1>
     <p class="tagline">~ The Web's #1 Escape Room Squad since 1996 ~</p>
+    <p class="tagline">~ licensed in your state ~</p>
 
     <marquee scrollamount="6">
       *** WELCOME TO OUR HOMEPAGE *** No room can hold us! ***
@@ -157,12 +167,19 @@
       <div class="stripes"></div>
     </div>
 
-    <h2>Our Specialties</h2>
-    <ul class="specialties">
-      <li>Good with safe cracking</li>
-      <li>Zombies ok</li>
-      <li>Have our own flashlights</li>
-    </ul>
+    <div class="specialties-block">
+      <h2>Our Specialties</h2>
+      <ul class="specialties">
+        <li>Can fit into coffins</li>
+        <li>Safe cracking</li>
+        <li>Good with puppets</li>
+        <li>Comfortable around taxidermy</li>
+        <li>Alright with extreme temperatures</li>
+        <li>Zombies & demons ok</li>
+        <li>Prison infiltration and exfiltration</li>
+        <li>Have our own flashlights</li>
+      </ul>
+    </div>
 
     <hr class="rainbow">
 
@@ -175,9 +192,7 @@
        Sign our guestbook (coming soon!)</p>
 
     <div class="footer">
-      &copy; 1996&ndash;2026 Jack of Some Tricks. All rites reserved.<br>
-      This page made with &#10084; and Notepad. No frames. No applets. Pure HTML.<br>
-      <a href="mailto:webmaster@jackofsometricks.com">webmaster@jackofsometricks.com</a>
+      &copy; 1996&ndash;2026 Jack of Some Tricks. All rights reserved.<br>
     </div>
   </div>
 
