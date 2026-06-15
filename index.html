@@ -140,6 +140,38 @@
     border: 1px inset #ff3300;
     display: inline-block;
   }
+  /* ---- Contact / voicemail box ---- */
+  .contact-box {
+    margin: 16px auto;
+    max-width: 420px;
+    background: #000080;
+    color: #ffff00;
+    border: 4px ridge #c0c0c0;
+    padding: 10px 14px 14px;
+  }
+  .contact-msg {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 17px;
+    margin: 4px 0 8px;
+  }
+  .contact-num {
+    margin: 6px 0;
+  }
+  .contact-num a {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 26px;
+    color: #00ff00;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .contact-num a:hover { text-decoration: underline; }
+  .contact-sub {
+    font-style: italic;
+    font-size: 14px;
+    color: #00ffff;
+    margin: 6px 0 2px;
+  }
   .footer {
     margin-top: 18px;
     font-size: 13px;
@@ -159,6 +191,8 @@
     .construction .banner { font-size: 16px; letter-spacing: 1px; }
     .counter-box { padding: 8px 10px; }
     .counter-digits { font-size: 26px; letter-spacing: 3px; }
+    .contact-msg { font-size: 18px; }
+    .contact-num a { font-size: 24px; }
     .footer { font-size: 14px; }
   }
 </style>
@@ -207,6 +241,17 @@
 
     <p><span class="blink" style="color:#cc0000;font-weight:bold;">NEW!</span>
        Sign our guestbook (coming soon!)</p>
+
+    <hr class="rainbow">
+
+    <div class="contact-box">
+      <p class="contact-msg">Need to get in touch with us?<br>
+         Leave us a voicemail at&hellip;</p>
+      <p class="contact-num">
+        <a href="tel:+15125804844">&#9742; (512) 580-4844</a>
+      </p>
+      <p class="contact-sub">~ All messages will be locked in a room they'll never escape ~</p>
+    </div>
 
     <div class="footer">
       &copy; 1996&ndash;2026 Jack of Some Tricks. All rights reserved.<br>
