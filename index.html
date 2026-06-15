@@ -166,6 +166,13 @@
     letter-spacing: 1px;
   }
   .contact-num a:hover { text-decoration: underline; }
+  /* Email is longer than the phone number — shrink it and let it wrap */
+  #email-link {
+    font-size: 18px;
+    letter-spacing: 0;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
   .contact-sub {
     font-style: italic;
     font-size: 14px;
@@ -251,6 +258,10 @@
         <a href="tel:+15125804844">&#9742; (512) 580-4844</a>
       </p>
       <p class="contact-sub">~ All messages will be locked in a room they'll never escape ~</p>
+      <p class="contact-msg" style="margin-top:12px;">Or send us electronic mail:</p>
+      <p class="contact-num">
+        <a id="email-link"><span class="blink">&#9993;</span> <span id="email-text">[ enable JavaScript to view ]</span></a>
+      </p>
     </div>
 
     <div class="footer">
@@ -268,6 +279,17 @@
     var display = 13037 + n;
     document.getElementById("counter").textContent =
       ("000000" + display).slice(-6);
+  })();
+
+  // Assemble the contact email at runtime so it never appears as a
+  // harvestable "user@domain.tld" string in the page source.
+  (function () {
+    var user = "webmaster";
+    var domain = ["jackofsometricks", "com"].join(".");
+    var addr = user + String.fromCharCode(64) + domain;
+    var link = document.getElementById("email-link");
+    link.href = "mailto:" + addr;
+    document.getElementById("email-text").textContent = addr;
   })();
 </script>
 </body>
